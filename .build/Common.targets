@@ -1,0 +1,21 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <PropertyGroup>
+  <TargetFrameworkVersion Condition="'$(TargetFrameworkVersion)' == ''">v4.0</TargetFrameworkVersion>
+  <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+  <Configuration Condition="'$(Configuration)' == ''">Release-$(TargetFrameworkVersion)</Configuration>
+  <OutputPath Condition="'$(OutputPath)' == ''">bin/$(Configuration)/</OutputPath>
+  <DocumentationFile Condition="'$(DocumentationFile)' == ''">$(OutputPath)/$(Name).xml</DocumentationFile>
+  <RootNamespace Condition="'$(RootNamespace)' == ''">$(Name)</RootNamespace>
+  <AssemblyName Condition="'$(AssemblyName)' == ''">$(Name)</AssemblyName>
+  <WarningLevel Condition="'$(WarningLevel)' == ''">3</WarningLevel>
+ </PropertyGroup>
+ <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release-v4.0|AnyCPU'">
+  <DebugType>pdbonly</DebugType>
+  <Optimize>true</Optimize>
+  <Tailcalls>true</Tailcalls>
+  <DefineConstants>TRACE</DefineConstants>
+ </PropertyGroup>
+ <ItemGroup Condition="('$(Configuration)' == 'Release-v4.0') AND ('$(Name)' == 'Website')" />
+ <ItemGroup Condition="('$(Configuration)' == 'Release-v4.0') AND ('$(Name)' == 'Web')" />
+ <Import Project="$(FSharpHome)/Microsoft.FSharp.targets" Condition=" '$(ImportFSharpTargets)' != '' " />
+</Project>

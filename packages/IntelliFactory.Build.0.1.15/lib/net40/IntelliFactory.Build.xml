@@ -1,0 +1,1248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>IntelliFactory.Build</name></assembly>
+<members>
+<member name="T:AutoAssemblyInfo">
+
+</member>
+<member name="P:IntelliFactory.Build.CommonBuildSetup.Solution.Projects(Microsoft.FSharp.Collections.FSharpList{IntelliFactory.Build.CommonBuildSetup.Project})">
+<summary>
+ The projects to build within the solution.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.CommonBuildSetup.Solution.Prefix(Microsoft.FSharp.Core.FSharpOption{System.String})">
+<summary>
+ A unique prefix to distinguish multiple solutions.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.CommonBuildSetup.Solution.Metadata(IntelliFactory.Build.CommonBuildSetup.Metadata)">
+<summary>
+ The solution metadata.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.CommonBuildSetup.Solution.RootDirectory">
+<summary>
+ The root directory as passed to the constructor.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.CommonBuildSetup.Solution.Projects">
+<summary>
+ The projects to build within the solution.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.CommonBuildSetup.Solution.Prefix">
+<summary>
+ A unique prefix to distinguish multiple solutions.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.CommonBuildSetup.Solution.Metadata">
+<summary>
+ The solution metadata.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.CommonBuildSetup.Solution.MSBuild(Microsoft.FSharp.Core.FSharpOption{IntelliFactory.Build.CommonBuildSetup.MSBuildOptions})">
+<summary>
+ Builds the solution with in-process MSBuild.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.CommonBuildSetup.Solution.#ctor(System.String)">
+<summary>
+ Constructs a solution representation.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.CommonBuildSetup.Solution">
+<summary>
+ Represents a solution to build.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.CommonBuildSetup.Metadata.Create">
+<summary>
+ Constructs a default Metadata record.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.CommonBuildSetup.Metadata">
+<summary>
+ Descripts metadata for the solution.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.Project.Name">
+<summary>
+ The name of the project.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.Project.MSBuildProjectFilePath">
+<summary>
+ Full path to the MSBuild project file, if present.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.Project.BuildConfigurations">
+<summary>
+ List of configurations in which the project is built.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.CommonBuildSetup.Project.MSBuild(Microsoft.FSharp.Core.FSharpOption{IntelliFactory.Build.CommonBuildSetup.MSBuildOptions})">
+<summary>
+ Builds the project with in-process MSBuild.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.CommonBuildSetup.Project">
+<summary>
+ Represents an project that is part of the solution.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.MSBuildOptions.Targets">
+<summary>
+ The targets to run.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.MSBuildOptions.Properties">
+<summary>
+ The properties to pass to MSBuild; defaults like
+ Configuration will be set automatically.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.MSBuildOptions.BuildConfiguration">
+<summary>
+ The specific build configuraiton. If None, will build all.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.CommonBuildSetup.MSBuildOptions">
+<summary>
+ Configures MSBuild.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.BuildConfiguration.NuGetDependencies">
+<summary>
+ The NuGet dependencies for this configuration.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.BuildConfiguration.FrameworkVersion">
+<summary>
+ The target framework.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.BuildConfiguration.Debug">
+<summary>
+ Flag determining if this is a Debug configuration
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.CommonBuildSetup.BuildConfiguration.ConfigurationName">
+<summary>
+ The name of the configuration, such as Release.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.CommonBuildSetup.BuildConfiguration">
+<summary>
+ Represents a build confiugration for a project.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.CommonBuildSetup.FrameworkVersion.ToFrameworkName">
+<summary>
+ Gets the corresponding FrameworkName.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.CommonBuildSetup.FrameworkVersion.GetNuGetLiteral">
+<summary>
+ Gets the NuGet form such as &quot;net40&quot;
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.CommonBuildSetup.FrameworkVersion.GetMSBuildLiteral">
+<summary>
+ Gets the MSBuild form such as &quot;v4.0&quot;
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.CommonBuildSetup.FrameworkVersion">
+<summary>
+ Enumerates framework versions.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.CommonBuildSetup.Prepare(Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.Unit},System.String)">
+<summary>
+ Generates boostrapping MSBuild boilerplate in a given folder.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.CommonBuildSetup">
+<summary>
+ Experimental support for convention-based matrix F# builds.
+ API subject to change - use at your own risk.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Content.WriteFile(System.String)">
+<summary>
+ Writes to a given file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Content.ReadTextFile(System.String)">
+<summary>
+ Reads a text file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Content.ReadBinaryFile(System.String)">
+<summary>
+ Reads a binary file.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.FileSystem.Content">
+<summary>
+ Defines text and binary content.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Binary.WriteFile(System.String)">
+<summary>
+ Writes to a given file
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Binary.Write(System.IO.Stream)">
+<summary>
+ Writes to a given stream.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Binary.ReadStream(System.IO.Stream)">
+<summary>
+ Reads a stream.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Binary.ReadFile(System.String)">
+<summary>
+ Reads a binary file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Binary.Read">
+<summary>
+ Opens a stream for reading.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Binary.GetBytes">
+<summary>
+ Reads content as a byte array.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.FileSystem.Binary.FromBytes(System.Byte[])">
+<summary>
+ Constructs content from a byte array.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.FileSystem.Binary">
+<summary>
+ Represents binary content.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.FileSystem.DefaultEncoding">
+<summary>
+ The default encoding is UTF-8 without BOM.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.FileSystem">
+<summary>
+ Provides utilities for accessing the file system and representing files.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.Mercurial.InferTag(System.String)">
+<summary>
+ Given a Mercurial checkout (a directory containing a `.hg` subfolder),
+ infers the current Mercurial tag. If the current directory state is not
+ tagged, returns the long hash instead. Returns `None` if `.hg` is not found.
+ This method does not call Mercurial but analyzes the `.hg` folder directly.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.Mercurial">
+<summary>
+ Utilities for working with Mercurial (Hg) repositories.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.NuGetUtils.Package.Version">
+<summary>
+ The version of the NuGet package.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.NuGetUtils.Package.Name">
+<summary>
+ The name of the NuGet package.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.NuGetUtils.Package.Content">
+<summary>
+ The content of the `.nupkg` package file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.NuGetUtils.Package.FromFile(System.String)">
+<summary>
+ Loads a nupkg file.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.NuGetUtils.Package">
+<summary>
+ Represents local (in-memory) NuGet packages.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.NuGetUtils.AssemblyReference">
+<summary>
+ Represents an assembly reference.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.NuGetUtils.LocalRepository.Repository">
+<summary>
+ The repository object.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.NuGetUtils.LocalRepository.PathResolver">
+<summary>
+ Resolver for package paths.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.NuGetUtils.LocalRepository.Path">
+<summary>
+ The path passed to constructor.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.NuGetUtils.LocalRepository.Create(System.String)">
+<summary>
+ Constructor based on the full path to `packages` folder.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.NuGetUtils.LocalRepository">
+<summary>
+ Encapsulates a local package repository.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.NuGetUtils.ComputeVersion(System.String,NuGet.SemanticVersion)">
+<summary>
+ Experimental utility method. Computes a version with an auto-incremented
+ build number based on the latest online version of a package.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.NuGetUtils.FindLatestOnlineVersion(System.String)">
+<summary>
+ Experimental utility method. Finds the most recent
+ online version of a package on the default NuGet feed.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.NuGetUtils.FindPackage(IntelliFactory.Build.NuGetUtils.LocalRepository,System.String)">
+<summary>
+ Finds a local package by ID.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.NuGetUtils.ComputeReferences(System.Runtime.Versioning.FrameworkName,Microsoft.FSharp.Core.FSharpFunc{NuGet.IPackage,System.Boolean},IntelliFactory.Build.NuGetUtils.LocalRepository)">
+<summary>
+ Computes transitive assembly references using NuGet.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.NuGetUtils.MostRecent(System.Collections.Generic.IEnumerable{NuGet.IPackage})">
+<summary>
+ Filters NuGet packages to only include latest available versions.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.NuGetUtils">
+<summary>
+ Provides some utilities for working with NuGet packages.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Archive.WriteToDirectory(System.String)">
+<summary>
+ Writes the zip file to a given directory.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Archive.Uninstall(IntelliFactory.Build.VSTemplates.InstallConfig)">
+<summary>
+ Attempts to locally uninstall the template.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Archive.Project(IntelliFactory.Build.VSTemplates.ProjectTemplate)">
+<summary>
+ Constructs a project template.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Archive.Install(IntelliFactory.Build.VSTemplates.InstallConfig)">
+<summary>
+ Attempts to locally install the template.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Archive.FromFile(IntelliFactory.Build.VSTemplates.TemplateKind,System.String)">
+<summary>
+ Reads a specific zip file.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.Archive">
+<summary>
+ An in-memory representation of a VisualStudio `.vstemplate` file.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.ProjectTemplate.Create(IntelliFactory.Build.VSTemplates.TemplateData,IntelliFactory.Build.VSTemplates.Project)">
+<summary>
+ Creates a new ProjectTemplate.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.ProjectTemplate">
+<summary>
+ Corresponds to the `VSTemplate` element of type `Project`.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.VSTemplates.NuGetPackages.Packages">
+<summary>
+ The list of package references.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.VSTemplates.NuGetPackages.Identity">
+<summary>
+ The unique identifier of the parent VSIX package.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.NuGetPackages.Create(IntelliFactory.Build.VsixPackages.Identity,System.Collections.Generic.IEnumerable{IntelliFactory.Build.NuGetUtils.Package})">
+<summary>
+ Constructs a new instance.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.NuGetPackages">
+<summary>
+ The NuGet packages required by the project templates.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.InstallConfig.Create(System.Collections.Generic.IEnumerable{System.String},IntelliFactory.Build.VSTemplates.VisualStudioVersion)">
+<summary>
+ Creates a new `InstallConfig`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.InstallConfig">
+<summary>
+ Describes template installation options.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.TemplateKind">
+<summary>
+ The template kind used for installation.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.VisualStudioVersion">
+<summary>
+ Represents VisualStudio versions.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.TemplateData.Create(IntelliFactory.Build.VSTemplates.ProjectType,System.String,System.String,IntelliFactory.Build.VSTemplates.Icon)">
+<summary>
+ Creates with given required parameters.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.TemplateData">
+<summary>
+ Describes templates, corresponds to the `TemplateData` XML element.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Icon.FromFile(System.String)">
+<summary>
+ Creates from a file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Icon.Create(System.String,IntelliFactory.Build.FileSystem.Binary)">
+<summary>
+ Creates explicitly.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.Icon">
+<summary>
+ Represents icons.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.ProjectType">
+<summary>
+ Represents project types.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Project.FromFile(System.String,System.Collections.Generic.IEnumerable{IntelliFactory.Build.VSTemplates.FolderElement})">
+<summary>
+ Creates a new `Project` by reading a file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Project.Create(System.String,System.String,System.Collections.Generic.IEnumerable{IntelliFactory.Build.VSTemplates.FolderElement})">
+<summary>
+ Creates a new `Project` from explicit components.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.Project">
+<summary>
+ Represents a project corresponding to the `Project` XML element.
+ See &lt;http://msdn.microsoft.com/en-US/library/ms171401.aspx&gt;
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.FolderElement">
+<summary>
+ Represents contents of a folder.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Folder.Create(System.String,System.Collections.Generic.IEnumerable{IntelliFactory.Build.VSTemplates.FolderElement})">
+<summary>
+ Creates a new `Folder` explicitly.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.Folder">
+<summary>
+ Defines a folder of project items corresponding to the `Folder` XML element.
+ See &lt;http://msdn.microsoft.com/en-US/library/ahkztdcb(v=vs.110).aspx&gt;
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Item.FromTextFile(System.String)">
+<summary>
+ Creates a new `ProjectItem` by reading a text file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Item.FromBinaryFile(System.String)">
+<summary>
+ Creates a new `ProjectItem` by reading a binary file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.Item.Create(System.String,IntelliFactory.Build.FileSystem.Content)">
+<summary>
+ Creates a new `ProjectItem` from explicit components.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.Item">
+<summary>
+ Corresponds to the `ProjectItem` XML element
+ describing a VisualStudio item template.
+ See &lt;http://msdn.microsoft.com/en-us/library/ms171408.aspx&gt;
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.ItemSubType">
+<summary>
+ Subtypes for `Item`.
+ See &lt;http://msdn.microsoft.com/en-us/library/ms171408(v=vs.80).aspx&gt;
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.ProjectItem.FromTextFile(System.String)">
+<summary>
+ Creates a new `ProjectItem` by reading a text file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.ProjectItem.FromBinaryFile(System.String)">
+<summary>
+ Creates a new `ProjectItem` by reading a binary file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VSTemplates.ProjectItem.Create(System.String,IntelliFactory.Build.FileSystem.Content)">
+<summary>
+ Creates a new `ProjectItem` from explicit components.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates.ProjectItem">
+<summary>
+ Defines a project item corresponding to the `ProjectItem` XML element
+ within VisualStudio project templates.
+ See &lt;http://msdn.microsoft.com/en-us/library/ys81cc94.aspx&gt;
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VSTemplates">
+<summary>
+ Provides a facility to generate VisualStudio template archive files.
+ These typically have a `.zip` extension and contain `.vstemplate` XML manifests.
+ Quickstart: use the static methods on `Archive` to construct
+ an in-memory `.zip` representation you can then manipulate.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.VsixFile.WriteToDirectory(System.String)">
+<summary>
+ Writes the `.vsix` file to a directory.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.VsixFile.FromFile(System.String)">
+<summary>
+ Reads a `.vsix` file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.VsixFile.Create(System.String,IntelliFactory.Build.VsixExtensions.Vsix)">
+<summary>
+ Creates a `VsixFile`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.VsixFile">
+<summary>
+ Represents an in-memory VSIX package.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.Vsix.Create(IntelliFactory.Build.VsixExtensions.Identifier,System.Collections.Generic.IEnumerable{IntelliFactory.Build.VsixExtensions.VsixContent})">
+<summary>
+ Constructs a new `Vsix` element.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.Vsix">
+<summary>
+ Respresents the top-level configuration element.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.VsixContent.ProjectTemplate(System.Collections.Generic.IEnumerable{System.String},IntelliFactory.Build.VSTemplates.ProjectTemplate)">
+<summary>
+ Helper for quick definition of template contents.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.VsixContent">
+<summary>
+ Unifies different types of content declarations.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.VSPackage.Create(System.String,IntelliFactory.Build.FileSystem.Content)">
+<summary>
+ Constructs a new `VSPackage`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.VSPackage">
+<summary>
+ Represents installed studio packages.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.ToolboxControl.Create(System.String,IntelliFactory.Build.FileSystem.Content)">
+<summary>
+ Constructs a new `ToolboxControl`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.ToolboxControl">
+<summary>
+ Represents installed toolbox controls.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.MEFComponent.Create(System.String,IntelliFactory.Build.FileSystem.Content)">
+<summary>
+ Constructs a new `MEFComponent`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.MEFComponent">
+<summary>
+ Represents installed MEF components.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.ProjectTemplate.Create(System.Collections.Generic.IEnumerable{System.String},IntelliFactory.Build.VSTemplates.ProjectTemplate)">
+<summary>
+ Creates a new `Template`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.ProjectTemplate">
+<summary>
+ Represents installed project templates.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.CustomExtension.Create(System.String,IntelliFactory.Build.FileSystem.Content)">
+<summary>
+ Constructs a new `CustomExtension`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.CustomExtension">
+<summary>
+ Represents installed custom extensions.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.Assembly.Create(System.String,IntelliFactory.Build.FileSystem.Content)">
+<summary>
+ Creates a new `Assembly`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.Assembly">
+<summary>
+ Represents installed assemblies.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.Identifier.Create(System.String,IntelliFactory.Build.VsixPackages.Identity,System.String,System.String)">
+<summary>
+ Creates a bare-bones identification section.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.Identifier">
+<summary>
+ Represents extension identification.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.SupportedFrameworks.Create(IntelliFactory.Build.VsixExtensions.FrameworkVersion,IntelliFactory.Build.VsixExtensions.FrameworkVersion)">
+<summary>
+ Constructs the range.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.SupportedFrameworks">
+<summary>
+ Represents a range of supported frameworks.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.FrameworkVersion">
+<summary>
+ Represents .NET framework versions.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.SupportedProduct">
+<summary>
+ Unifies different kinds of supported product declarations.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.IsolatedShellProduct.Create(System.String)">
+<summary>
+ Constructs the `IsolatedShellProduct`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.IsolatedShellProduct">
+<summary>
+ Represents an Isolated Shell application product entry.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixExtensions.VSProduct.Create(System.String,System.Collections.Generic.IEnumerable{IntelliFactory.Build.VsixExtensions.VSEdition})">
+<summary>
+ Constructs a new VisualStudio product entry.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.VSProduct">
+<summary>
+ Represents a VisualStudio product entry.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions.VSEdition">
+<summary>
+ Represents VisualStudio editions.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixExtensions">
+<summary>
+ Provides a facility to generate VisualStudio extension `.vsix` files
+ using the 2010 VSIX format compatible with VisualStudio 2010 and VisualStudio 2012,
+ see &lt;http://msdn.microsoft.com/en-us/library/vstudio/dd393754(v=vs.100).aspx&gt;
+ Quickstart: use the static methods on `VsixFile` to construct
+ an in-memory `.vsix` representation you can then manipulate.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.VsixPackages.Identity.Id">
+<summary>
+ The human-readable identifier.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.VsixPackages.Identity.Guid">
+<summary>
+ The unique GUID to disambiguate.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="M:IntelliFactory.Build.VsixPackages.Identity.GetFullId">
+<summary>
+ Constructs the full disambiguated identifier.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.VsixPackages.Identity.Create(System.String,System.Guid)">
+<summary>
+ Constructs a new instance.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixPackages.Identity">
+<summary>
+ Uniquely identifies extension packages.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.VsixPackages">
+<summary>
+ Declares common types for VSIX VisualStudio extensions and VSTemplate packages.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.XmlGenerator.INode.Node">
+<summary>
+ The equivalent node.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.XmlGenerator.INode">
+<summary>
+ An interface for node-equivalent types.
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:IntelliFactory.Build.XmlGenerator.Node">
+<summary>
+ Represents simple XML nodes.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.XmlGenerator.Element.Name">
+<summary>
+ The qualified name.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.XmlGenerator.Element.Children">
+<summary>
+ The children collection.
+</summary>
+</member>
+<member name="F:IntelliFactory.Build.XmlGenerator.Element.Attributes">
+<summary>
+ The attribute collection.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Element.op_Subtraction``2(IntelliFactory.Build.XmlGenerator.Element,``0)">
+<summary>
+ Replaces the children.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Element.op_MinusMinus(IntelliFactory.Build.XmlGenerator.Element,System.String)">
+<summary>
+ Replaces the children with a single text node.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Element.op_Addition``1(IntelliFactory.Build.XmlGenerator.Element,``0)">
+<summary>
+ Replaces the attributes.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Element.WithText(System.String,IntelliFactory.Build.XmlGenerator.Element)">
+<summary>
+ Replaces the children with a single text node.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Element.WithChildren``2(``0,IntelliFactory.Build.XmlGenerator.Element)">
+<summary>
+ Replaces the children.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Element.WithAttributes``1(``0,IntelliFactory.Build.XmlGenerator.Element)">
+<summary>
+ Replaces the attributes.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Element.Create(System.String,System.String)">
+<summary>
+ Constructs an new empty Element.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Element.Create(System.String)">
+<summary>
+ Constructs an new empty Element.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.XmlGenerator.Element">
+<summary>
+ Represents simple XML elements.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.XmlGenerator.Name.Uri">
+<summary>
+ The URI part of the name, or an empty string.
+</summary>
+</member>
+<member name="P:IntelliFactory.Build.XmlGenerator.Name.Local">
+<summary>
+ The local part of the name.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Name.Create(System.String,System.String)">
+<summary>
+ Creates a new Name with a given URI part.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Name.Create(System.String)">
+<summary>
+ Creates a new Name without the URI part.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.XmlGenerator.Name">
+<summary>
+ Represents qualified names.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.WriteFile(System.String,IntelliFactory.Build.XmlGenerator.Element)">
+<summary>
+ Writes an `Element` to a file.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Write(IntelliFactory.Build.XmlGenerator.Element)">
+<summary>
+ Writes an `Element` to a string.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.ToXElement(IntelliFactory.Build.XmlGenerator.Element)">
+<summary>
+ Converts the `Element` to an `XElement`.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.ReadFile(System.String)">
+<summary>
+ Reads an XML file to an `Element`.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.Read(System.String)">
+<summary>
+ Reads an XML string to an `Element`.
+</summary>
+</member>
+<member name="M:IntelliFactory.Build.XmlGenerator.FromXElement(System.Xml.Linq.XElement)">
+<summary>
+ Constructs an `Element` from an `XElement`.
+</summary>
+</member>
+<member name="T:IntelliFactory.Build.XmlGenerator">
+<summary>
+ Provides a facility to generate simple XML documents.
+</summary>
+</member>
+</members>
+</doc>

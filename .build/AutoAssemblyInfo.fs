@@ -1,0 +1,2 @@
+module internal AutoAssemblyInfo
+do ()

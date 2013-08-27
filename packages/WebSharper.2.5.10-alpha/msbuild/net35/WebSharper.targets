@@ -1,0 +1,6 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <PropertyGroup>
+  <WebSharperHome>$(MSBuildThisFileDirectory)/../../tools/net35</WebSharperHome>
+ </PropertyGroup>
+ <Import Project="$(WebSharperHome)/WebSharper.targets" />
+</Project>

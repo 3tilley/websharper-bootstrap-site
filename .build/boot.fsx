@@ -1,0 +1,6 @@
+#r @"C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\.build\FAKE.2.1.246-alpha\tools\NuGet.Core.dll"
+#r @"C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\.build\FAKE.2.1.246-alpha\tools\FakeLib.dll"
+#r @"C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\packages\DotNetZip.1.9.1.8\lib\net20\Ionic.Zip.dll"
+#r @"C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\packages\Microsoft.Web.Xdt.1.0.0\lib\net40\Microsoft.Web.XmlTransform.dll"
+#r @"C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\packages\NuGet.Core.2.7.0\lib\net40-Client\NuGet.Core.dll"
+#r @"C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\packages\IntelliFactory.Build.0.1.15\lib\net40\IntelliFactory.Build.dll"

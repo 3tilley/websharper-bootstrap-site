@@ -1,0 +1,6 @@
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <PropertyGroup>
+  <WebSharperHome>C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\packages\WebSharper.2.5.10-alpha\tools\net40</WebSharperHome>
+  <FSharpCoreLocation>C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\packages\FAKE.2.1.246-alpha\tools\FSharp.Core.dll</FSharpCoreLocation>
+ </PropertyGroup>
+</Project>
