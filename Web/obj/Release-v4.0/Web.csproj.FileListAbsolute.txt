@@ -45,3 +45,4 @@ C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\bin\IntelliFacto
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\obj\Release-v4.0\Web.csprojResolveAssemblyReference.cache
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\obj\Release-v4.0\Web.dll
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\obj\Release-v4.0\Web.pdb
+C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\bin\Web.dll.config

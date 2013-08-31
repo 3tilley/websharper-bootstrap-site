@@ -19,6 +19,8 @@
     <Compile Include="Skin.fs" />
     <Compile Include="Content.fs" />
     <Compile Include="Site.fs" />
+    <None Include="WebSharper.targets" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

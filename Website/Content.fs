@@ -17,7 +17,7 @@ let Menu (ctx: Context<Actions.Action>) =
 let HomePage =
     Skin.WithTemplate "Home" Menu <| fun ctx ->
         [
-            Div [Class "hero-unit"] -< [Text "When I can figure out how to use this, we should have a New York website."]
+            Div [Class "hero-unit"] -< [Text "No."]
             Div [Class "row"] -< [
                 yield Div [Class "span2"] -< [
                     new Controls.SampleButtons()

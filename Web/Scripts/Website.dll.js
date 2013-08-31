@@ -27,29 +27,29 @@
      Content=Default.Div(Runtime.New(T,{
       $:0
      }));
-     return Default.Div(List.ofArray([Group(List.ofArray([(x=Button("Left"),(f=(x1=function()
+     return Default.Div(List.ofArray([Group(List.ofArray([(x=Button("Vikki"),(f=(x1=function()
      {
       return function()
       {
-       return Content.set_Text("Left");
+       return Content.set_Text("Loves cock");
       };
      },function(arg10)
      {
       return EventsPervasives.Events().OnClick(x1,arg10);
-     }),(f(x),x))),(x2=Button("Middle"),(f1=(x3=function()
+     }),(f(x),x))),(x2=Button("Fole"),(f1=(x3=function()
      {
       return function()
       {
-       return Content.set_Text("Middle");
+       return Content.set_Text("Loves the gym");
       };
      },function(arg10)
      {
       return EventsPervasives.Events().OnClick(x3,arg10);
-     }),(f1(x2),x2))),(x4=Button("Right"),(f2=(x5=function()
+     }),(f1(x2),x2))),(x4=Button("Everyone"),(f2=(x5=function()
      {
       return function()
       {
-       return Content.set_Text("Right");
+       return Content.set_Text("Loves Super Till");
       };
      },function(arg10)
      {
