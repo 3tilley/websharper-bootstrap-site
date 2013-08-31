@@ -46,3 +46,6 @@ C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\obj\Release-v4.0
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\obj\Release-v4.0\Web.dll
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\obj\Release-v4.0\Web.pdb
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Web\bin\Web.dll.config
+C:\temp\Web.dll.config
+C:\temp\Web.dll
+C:\temp\Web.pdb

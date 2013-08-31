@@ -5,3 +5,6 @@ C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Website\bin\Release-
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Website\obj\Release-v4.0\Website.fsprojResolveAssemblyReference.cache
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Website\obj\Release-v4.0\Website.dll
 C:\Users\Maximus\Documents\GitHub\websharper-bootstrap-site\Website\obj\Release-v4.0\Website.pdb
+C:\temp\Website.dll
+C:\temp\Website.pdb
+C:\temp\Website.xml

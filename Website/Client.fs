@@ -15,11 +15,11 @@ let SampleButtons () =
     Div [
         Group [
             Button "Vikki"
-            |>! OnClick (fun _ _ -> Content.Text <- "Loves cock")
+            |>! OnClick (fun _ _ -> Content.Text <- "Test 1")
             Button "Fole"
-            |>! OnClick (fun _ _ -> Content.Text <- "Loves the gym")
+            |>! OnClick (fun _ _ -> Content.Text <- "Test 2")
             Button "Everyone"
-            |>! OnClick (fun _ _ -> Content.Text <- "Loves Super Till")
+            |>! OnClick (fun _ _ -> Content.Text <- "Test 3")
         ]
         Content
     ]
