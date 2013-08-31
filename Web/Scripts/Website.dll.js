@@ -31,7 +31,7 @@
      {
       return function()
       {
-       return Content.set_Text("Loves cock");
+       return Content.set_Text("Test 1");
       };
      },function(arg10)
      {
@@ -40,7 +40,7 @@
      {
       return function()
       {
-       return Content.set_Text("Loves the gym");
+       return Content.set_Text("Test 2");
       };
      },function(arg10)
      {
@@ -49,7 +49,7 @@
      {
       return function()
       {
-       return Content.set_Text("Loves Super Till");
+       return Content.set_Text("Test 3");
       };
      },function(arg10)
      {
