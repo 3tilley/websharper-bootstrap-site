@@ -78,7 +78,7 @@ let GenerateWebSharperTargets = T "GenerateWebSharperTargets" <| fun () ->
                 E "FSharpCoreLocation" - [X.TextNode info.FSharpCoreLocation]
             ]
         ]
-    let f = RootDir +/ ".build" +/ "WebSharper.targets"
+    let f = "" +/ ".build" +/ "WebSharper.targets"
     X.WriteFile f xml
     tracefn "Writing %s" f
 
